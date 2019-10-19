@@ -1,0 +1,22 @@
+<% include ./partials/header.ejs %>
+
+
+<div class="container">
+    <h1>Vaccines stock count</h1>
+    <table class="table table-sm">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Vaccine</th>
+            <th scope="col">count</th>
+        </tr>http://192.168.178.118:3000/vaccines/varilax
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row"><%=vaccine%></th>
+            <td><%=val%></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<% include ./partials/footer.ejs %>
