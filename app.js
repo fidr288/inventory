@@ -27,7 +27,8 @@ app.get("/", function(req, res){
 
 app.get("/vaccines", (req, res) => {
     const allVaccines = Object.keys(fakeDb);
-    res.render("index.ejs", {allVaccines: allVaccines});
+    const allValues = Object.values(fakeDb);
+    res.render("index.ejs", {allVaccines: allVaccines, allValues: allValues});
 });
 
 //SHOW ROUTE

@@ -2,17 +2,19 @@
 
 
 <div class="container">
-    <table class="table table-sm">
+    <h2>Vaccine stock</h2>
+    <table class="table table-striped">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">Vaccine</th>
-                <th scope="col">count</th>
+                <th scope="col">Count</th>
             </tr>
         </thead>
         <tbody>
             <% for (i = 0; i <allVaccines.length ; i++){ %>
             <tr>
                 <th scope="row"><%=allVaccines[i]%></th>
+                <th scope="row"><%=allValues[i]%></th>
             </tr>
             <% }; %>
         </tbody>
