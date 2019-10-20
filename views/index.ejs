@@ -4,16 +4,17 @@
 <div class="container">
     <table class="table table-sm">
         <thead class="thead-dark">
-        <tr>
-            <th scope="col">Vaccine</th>
-            <th scope="col">count</th>
-        </tr>
+            <tr>
+                <th scope="col">Vaccine</th>
+                <th scope="col">count</th>
+            </tr>
         </thead>
         <tbody>
-        <tr>
-            <th scope="row"><%=vaccine%></th/vaccines>
-            <td><%=val%></td>
-        </tr>
+            <% for (i = 0; i <allVaccines.length ; i++){ %>
+            <tr>
+                <th scope="row"><%=allVaccines[i]%></th>
+            </tr>
+            <% }; %>
         </tbody>
     </table>
 </div>

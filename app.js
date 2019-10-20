@@ -19,10 +19,15 @@ app.get("/", function(req, res){
 });
 
 //INDEX ROUTE
+// app.get("/vaccines", (req, res) => {
+//     const allVaccines = Object.keys(fakeDb);
+//     console.log(allVaccines);
+//     res.send(allVaccines);
+// });
+
 app.get("/vaccines", (req, res) => {
     const allVaccines = Object.keys(fakeDb);
-    console.log(allVaccines);
-    res.send(allVaccines);
+    res.render("index.ejs", {allVaccines: allVaccines});
 });
 
 //SHOW ROUTE
