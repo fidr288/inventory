@@ -10,7 +10,8 @@ const fakeDb = {
     "flu" : 1,
     "varilax" :3,
     "hep b" :4,
-    "hib" :8
+    "hib" :8,
+    "rabies": 19
 }
 
 //RESTFUL ROUTES
