@@ -1,13 +1,16 @@
 const express = require("express");
 const app = express();
+const bodyParser = require("body-parser");
+const sqlite3 = require('sqlite3');
+const db = new sqlite3.Database('vaccine.db');
 
 //setup app
 app.set("view engine", "ejs");
 // app.use(express.static("static_files"));
 app.use(express.static("public/javascript"));
+app.use(bodyParser.urlencoded({extended: true}));
 
-const sqlite3 = require('sqlite3');
-const db = new sqlite3.Database('vaccine.db');
+
 // const fakeDb = {
 //     "flu" : 1,
 //     "varilax" :3,
@@ -45,7 +48,9 @@ app.get("/vaccines", (req, res) => {
     // res.render("index.ejs", {allVaccines: allVaccines, allValues: allValues});
 });
 
-
+app.post("/vaccines", (req, res) => {
+    console.log(req.body);
+});
 //SHOW ROUTE
 // app.get("/vaccines/:id", (req, res) => {
 //     const vaccine = req.params.id;
