@@ -8,6 +8,7 @@
             <tr>
                 <th scope="col">Vaccine</th>
                 <th scope="col">Count</th>
+                <th scope="col">Change</th>
             </tr>
         </thead>
         <tbody>
@@ -15,6 +16,10 @@
             <tr>
                 <th scope="row"><%=allVaccines[i]%></th>
                 <td scope="row"><%=allValues[i]%></td>
+                <td scope="row">
+                    <input class="form-control" type="text" name="value">
+                    <button class = "ui violet basic big button" type="submit">submit</button>
+                </td>
             </tr>
             <% }; %>
         </tbody>
