@@ -1,6 +1,5 @@
 <% include ./partials/header.ejs %>
 
-
 <div class="container">
     <h2>Vaccine stock</h2>
     <table class="table table-striped">
@@ -17,8 +16,8 @@
                 <th scope="row"><%=allVaccines[i]%></th>
                 <td scope="row"><%=allValues[i]%></td>
                 <td scope="row">
-                    <input  type="text" name="value">
-                    <button class = "btn btn-secondary btn-sml" type="submit">submit</button>
+                    <input  type="text" name="value" size="4">
+                    <button class = "btn btn-secondary btn-sml" type="submit" id = "<%=allVaccines[i]%>">submit</button>
                 </td>
             </tr>
             <% }; %>
@@ -26,5 +25,13 @@
     </table>
 </div>
 
+<script src="button.js"></script>
+<!-- <script>
+    <% for (i = 0; i <allVaccines.length ; i++){ %>
+        document.querySelector("#<%=allVaccines[i]%>").addEventListener("click", function(){;
+        console.log("clicked");
+        });
+        <% }; %>
+</script> -->
 
 <% include ./partials/footer.ejs %>

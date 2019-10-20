@@ -5,11 +5,12 @@ const app = express();
 app.set("view engine", "ejs");
 
 // app.use(express.static("static_files"));
+app.use(express.static("public/javascript"));
 
 const fakeDb = {
     "flu" : 1,
     "varilax" :3,
-    "hep b" :4,
+    "hepb" :4,
     "hib" :8,
     "rabies": 19
 }
