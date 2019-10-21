@@ -6,12 +6,12 @@
     <table class="table-sm table-striped">
         <thead class="thead-dark">
             <h2 style = "text-align: left">child</h2>
-            <tr>
+            <!-- <tr>
                 <th scope="col">Vaccine</th>
                 <th scope="col">Count</th>
-                <!-- <th scope="col">Given</th> -->
+                <th scope="col">Given</th>
                 <th scope="col">Stock In</th>
-            </tr>
+            </tr> -->
         </thead>
         <tbody>
          
@@ -26,7 +26,7 @@
                         <button class = "btn btn-info btn-lg btn-block" type="submit"><%=allVaccines[i]%></button>
                         </form>
                 </td>
-                <td scope="row"><%=allValues[i]%></td>
+                <td scope="row" style="width: 60px"><%=allValues[i]%></td>
                 <td scope="row">
                     <form action="/vaccines" class="ui form" method="post">
                     <input  type="number" name="<%=allVaccines[i]%>"  min="1" max="150" style ="width:80px">
@@ -44,12 +44,12 @@
         <table class="table-sm table-striped">
             <thead class="thead-dark">
                 <h2 style = "text-align: left">misc</h2>
-                <tr>
-                    <th scope="col">Vaccine</th>
-                    <th scope="col">Count</th>
+                <!-- <tr> -->
+                    <!-- <th scope="col">Vaccine</th> -->
+                    <!-- <th scope="col">Count</th> -->
                     <!-- <th scope="col">Given</th> -->
-                    <th scope="col">Stock In</th>
-                </tr>
+                    <!-- <th scope="col">Stock In</th> -->
+                <!-- </tr> -->
             </thead>
             <tbody>
                 
@@ -63,7 +63,7 @@
                             <button class = "btn btn-info btn-lg btn-block" type="submit"><%=allVaccines[i]%></button>
                             </form>
                     </td>
-                    <td scope="row"><%=allValues[i]%></td>
+                    <td scope="row" style="width: 60px"><%=allValues[i]%></td>
                     <td scope="row">
                         <form action="/vaccines" class="ui form" method="post">
                         <input  type="number" name="<%=allVaccines[i]%>"  min="1" max="150" style ="width:80px">
