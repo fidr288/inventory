@@ -1,11 +1,11 @@
 <% include ./partials/header.ejs %>
 
-<div class="container">
+<div class="container" style = "width:400px">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-xs-6" style="margin-left: 10px">
     <table class="table-sm table-striped">
         <thead class="thead-dark">
-            <h2 style = "text-align: left">child</h2>
+            <!-- <h3 style = "text-align: left">child</h3> -->
             <!-- <tr>
                 <th scope="col">Vaccine</th>
                 <th scope="col">Count</th>
@@ -21,18 +21,22 @@
                 <!-- <th scope="row"><%=allVaccines[i]%></th> -->
                 <!-- <td scope="row"><%=allValues[i]%></td> -->
                 <td scope="row">
-                        <form action="/vaccines" class="ui form" method="post">
+                    <form action="/vaccines" class="ui form" method="post">
                         <input  type="hidden" name="<%=allVaccines[i]%>" value = '-1'>
-                        <button class = "btn btn-info btn-lg btn-block" type="submit"><%=allVaccines[i]%><br><%=allValues[i]%></button>
-                        </form>
+                        <button class = "btn btn-info btn-sm btn-block" type="submit"><%=allVaccines[i]%><br><%=allValues[i]%></button>
+                    </form>
+                    <form action="/vaccines" class="ui form" method="post">
+                        <input  type="number" name="<%=allVaccines[i]%>"  min="1" max="150" style ="width:80px">
+                        <button class = "btn btn-secondary btn-sml" type="submit">+</button>
+                    </form>
                 </td>
                 <!-- <td scope="row" style="width: 60px"><%=allValues[i]%></td> -->
-                <td scope="row">
+                <!-- <td scope="row">
                     <form action="/vaccines" class="ui form" method="post">
                     <input  type="number" name="<%=allVaccines[i]%>"  min="1" max="150" style ="width:80px">
                     <button class = "btn btn-secondary btn-sml" type="submit">+</button>
                     </form>
-                </td>
+                </td> -->
 
             </tr>
             <% }; %>
@@ -40,10 +44,10 @@
     </table>
 </div>
 
-<div class="col-md-6">
+<div class="col-xs-6" style="margin-left:50px ; padding-left: 30px; border-left-color: gray; border-left-style:dotted; border-left-width: 2px">
         <table class="table-sm table-striped">
             <thead class="thead-dark">
-                <h2 style = "text-align: left">misc</h2>
+                <!-- <h3 style = "text-align: left">misc</h3> -->
                 <!-- <tr> -->
                     <!-- <th scope="col">Vaccine</th> -->
                     <!-- <th scope="col">Count</th> -->
@@ -58,18 +62,22 @@
                     <!-- <th scope="row"><%=allVaccines[i]%></th> -->
                     <!-- <td scope="row"><%=allValues[i]%></td> -->
                     <td scope="row">
-                            <form action="/vaccines" class="ui form" method="post">
+                        <form action="/vaccines" class="ui form" method="post">
                             <input  type="hidden" name="<%=allVaccines[i]%>" value = '-1'>
-                            <button class = "btn btn-info btn-lg btn-block" type="submit"><%=allVaccines[i]%><br><%=allValues[i]%></button>
-                            </form>
+                            <button class = "btn btn-success btn-sm btn-block" type="submit"><%=allVaccines[i]%><br><%=allValues[i]%></button>
+                        </form>
+                        <form action="/vaccines" class="ui form" method="post">
+                            <input  type="number" name="<%=allVaccines[i]%>"  min="1" max="150" style ="width:80px">
+                            <button class = "btn btn-secondary btn-sml" type="submit">+</button>
+                        </form>
                     </td>
                     <!-- <td scope="row" style="width: 60px"><%=allValues[i]%></td> -->
-                    <td scope="row">
+                    <!-- <td scope="row">
                         <form action="/vaccines" class="ui form" method="post">
                         <input  type="number" name="<%=allVaccines[i]%>"  min="1" max="150" style ="width:80px">
                         <button class = "btn btn-secondary btn-sml" type="submit">+</button>
                         </form>
-                    </td>
+                    </td> -->
                 </tr>
                 <% }; %>
             </tbody>
