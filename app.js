@@ -10,32 +10,10 @@ app.set("view engine", "ejs");
 app.use(express.static("public/javascript"));
 app.use(bodyParser.urlencoded({extended: true}));
 
-
-// const fakeDb = {
-//     "flu" : 1,
-//     "varilax" :3,
-//     "hepb" :4,
-//     "hib" :8,
-//     "rabies": 19
-// }
-
-//RESTFUL ROUTES
 app.get("/", function(req, res){
     res.redirect("/vaccines");
 });
 
-//INDEX ROUTE
-// app.get("/vaccines", (req, res) => {
-//     const allVaccines = Object.keys(fakeDb);
-//     console.log(allVaccines);
-//     res.send(allVaccines);
-// });
-
-// app.get("/vaccines", (req, res) => {
-//     const allVaccines = Object.keys(fakeDb);
-//     const allValues = Object.values(fakeDb);
-//     res.render("index.ejs", {allVaccines: allVaccines, allValues: allValues});
-// });
 
 app.get("/vaccines", (req, res) => {
     db.all('SELECT * FROM vaccine_count', (err, rows) => {
@@ -43,26 +21,19 @@ app.get("/vaccines", (req, res) => {
         const allValues = rows.map(n => n.count);
         res.render("index.ejs", {allVaccines: allVaccines, allValues: allValues});
     });
-    // const allVaccines = Object.keys(fakeDb);
-    // const allValues = Object.values(fakeDb);
-    // res.render("index.ejs", {allVaccines: allVaccines, allValues: allValues});
+
 });
 
 app.post("/vaccines", (req, res) => {
+    const key =  Object.keys(req.body)[0];
+    const submitValue =  Object.values(req.body)[0];
+    db.get("SELECT count FROM vaccine_count WHERE name = " +"'"+key+"'", (err, rows) => {
+        const newValue = Number(submitValue) + Number((Object.values(rows)[0]));
+        db.run("UPDATE vaccine_count SET count = " + "'"+newValue+"'"+ " WHERE name = " + "'"+key+"'");
+    });
+    res.redirect("/vaccines");
     console.log(req.body);
 });
-//SHOW ROUTE
-// app.get("/vaccines/:id", (req, res) => {
-//     const vaccine = req.params.id;
-//     const val = fakeDb[vaccine];
-//     res.render("index.ejs", {val:val, vaccine:vaccine});
-// });
-
-//EDIT ROUTE
-// app.get("/edit"), (req, res) => {
-//     res.send("edit");
-// };
-
 
 app.listen(3000, () => {
     console.log("server started");
