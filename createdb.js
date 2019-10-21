@@ -17,10 +17,12 @@ db.serialize(() => {
   db.run("INSERT INTO vaccine_count VALUES ('infarix-ipv' , 0)");
   db.run("INSERT INTO vaccine_count VALUES ('mmr' , 0)");
   db.run("INSERT INTO vaccine_count VALUES ('flu' , 0)");
-  varilax  db.run("INSERT INTO vaccine_count VALUES ('boostrix' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('boostrix' , 0)");
   db.run("INSERT INTO vaccine_count VALUES ('hpv' , 0)");
   db.run("INSERT INTO vaccine_count VALUES ('adt' , 0)");
   db.run("INSERT INTO vaccine_count VALUES ('zostavax' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('menactra' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('bexsero' , 0)");
 
 
   console.log('successfully db');
