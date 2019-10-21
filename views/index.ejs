@@ -1,9 +1,11 @@
 <% include ./partials/header.ejs %>
 
 <div class="container">
-    <h2>Vaccine stock</h2>
-    <table class="table table-striped">
+    <div class="row">
+        <div class="col-md-6">
+    <table class="table-sm table-striped">
         <thead class="thead-dark">
+            <h2>child</h2>
             <tr>
                 <th scope="col">Vaccine</th>
                 <th scope="col">Count</th>
@@ -12,26 +14,65 @@
             </tr>
         </thead>
         <tbody>
-            <% for (i = 0; i <allVaccines.length ; i++){ %>
+         
+            <% for (i = 0; i <7 ; i++){ %>
             <tr>
+               
                 <th scope="row"><%=allVaccines[i]%></th>
                 <td scope="row"><%=allValues[i]%></td>
                 <td scope="row">
                         <form action="/vaccines" class="ui form" method="post">
                         <input  type="hidden" name="<%=allVaccines[i]%>" value = '-1'>
-                        <button class = "btn btn-danger btn-sml" type="submit">given</button>
+                        <button class = "btn btn-danger btn-lg btn-block" type="submit">given</button>
                         </form>
                 </td>
                 <td scope="row">
                     <form action="/vaccines" class="ui form" method="post">
                     <input  type="number" name="<%=allVaccines[i]%>"  min="1" max="150" style ="width:80px">
-                    <button class = "btn btn-secondary btn-sml" type="submit">add</button>
+                    <button class = "btn btn-secondary btn-sml" type="submit">+</button>
                     </form>
                 </td>
             </tr>
             <% }; %>
         </tbody>
     </table>
+</div>
+
+<div class="col-md-6">
+        <table class="table-sm table-striped">
+            <thead class="thead-dark">
+                <h2>misc</h2>
+                <tr>
+                    <th scope="col">Vaccine</th>
+                    <th scope="col">Count</th>
+                    <th scope="col">Given</th>
+                    <th scope="col">Stock In</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <% for (i = 7; i <allVaccines.length ; i++){ %>
+                <tr>
+                    <th scope="row"><%=allVaccines[i]%></th>
+                    <td scope="row"><%=allValues[i]%></td>
+                    <td scope="row">
+                            <form action="/vaccines" class="ui form" method="post">
+                            <input  type="hidden" name="<%=allVaccines[i]%>" value = '-1'>
+                            <button class = "btn btn-danger btn-lg btn-block" type="submit">given</button>
+                            </form>
+                    </td>
+                    <td scope="row">
+                        <form action="/vaccines" class="ui form" method="post">
+                        <input  type="number" name="<%=allVaccines[i]%>"  min="1" max="150" style ="width:80px">
+                        <button class = "btn btn-secondary btn-sml" type="submit">+</button>
+                        </form>
+                    </td>
+                </tr>
+                <% }; %>
+            </tbody>
+        </table>
+    </div>
+</div>
 </div>
 
 <!-- <script src="button.js"></script> -->

@@ -32,7 +32,7 @@ app.post("/vaccines", (req, res) => {
         db.run("UPDATE vaccine_count SET count = " + "'"+newValue+"'"+ " WHERE name = " + "'"+key+"'");
     });
     res.redirect("/vaccines");
-    // console.log(req.body);
+    // console.log(req.body)20;
 });
 
 app.listen(3000, () => {

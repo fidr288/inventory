@@ -9,9 +9,19 @@ db.serialize(() => {
   db.run("CREATE TABLE vaccine_count (name TEXT, count INTEGER)");
 
   // insert 3 rows of data:
-  db.run("INSERT INTO vaccine_count VALUES ('flu' , 2)");
-  db.run("INSERT INTO vaccine_count VALUES ('hib' , 9)");
-  db.run("INSERT INTO vaccine_count VALUES ('rabies' , 22)");
+  db.run("INSERT INTO vaccine_count VALUES ('rotarix' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('infarix-hexa' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('pneumococcal' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('hib' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('varilrix' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('infarix-ipv' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('mmr' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('flu' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('boostrix' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('hpv' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('adt' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('zostavax' , 0)");
+
 
   console.log('successfully db');
 
