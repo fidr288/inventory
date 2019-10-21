@@ -7,7 +7,8 @@
             <tr>
                 <th scope="col">Vaccine</th>
                 <th scope="col">Count</th>
-                <th scope="col">Change</th>
+                <th scope="col">Given</th>
+                <th scope="col">Stock In</th>
             </tr>
         </thead>
         <tbody>
@@ -16,9 +17,15 @@
                 <th scope="row"><%=allVaccines[i]%></th>
                 <td scope="row"><%=allValues[i]%></td>
                 <td scope="row">
+                        <form action="/vaccines" class="ui form" method="post">
+                        <input  type="hidden" name="<%=allVaccines[i]%>" value = '-1'>
+                        <button class = "btn btn-danger btn-sml" type="submit">given</button>
+                        </form>
+                </td>
+                <td scope="row">
                     <form action="/vaccines" class="ui form" method="post">
-                    <input  type="number" name="<%=allVaccines[i]%>" size="4">
-                    <button class = "btn btn-secondary btn-sml" type="submit" id = "<%=allVaccines[i]%>">submit</button>
+                    <input  type="number" name="<%=allVaccines[i]%>"  min="1" max="150" style ="width:80px">
+                    <button class = "btn btn-secondary btn-sml" type="submit">add</button>
                     </form>
                 </td>
             </tr>
@@ -27,7 +34,7 @@
     </table>
 </div>
 
-<script src="button.js"></script>
+<!-- <script src="button.js"></script> -->
 
 
 <% include ./partials/footer.ejs %>

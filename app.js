@@ -7,7 +7,7 @@ const db = new sqlite3.Database('vaccine.db');
 //setup app
 app.set("view engine", "ejs");
 // app.use(express.static("static_files"));
-app.use(express.static("public/javascript"));
+// app.use(express.static("public/javascript"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", function(req, res){
@@ -32,7 +32,7 @@ app.post("/vaccines", (req, res) => {
         db.run("UPDATE vaccine_count SET count = " + "'"+newValue+"'"+ " WHERE name = " + "'"+key+"'");
     });
     res.redirect("/vaccines");
-    console.log(req.body);
+    // console.log(req.body);
 });
 
 app.listen(3000, () => {
