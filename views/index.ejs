@@ -23,7 +23,7 @@
                 <td scope="row">
                     <form action="/vaccines" class="ui form" method="post">
                         <input  type="hidden" name="<%=allVaccines[i]%>" value = '-1'>
-                        <button class = "btn btn-info btn-sm btn-block" type="submit"><%=allVaccines[i]%><br><%=allValues[i]%></button>
+                        <button class = "btn btn-info btn-sm btn-block" type="submit"><%=allVaccines[i]%><br><strong><%=allValues[i]%></strong></button>
                     </form>
                     <form action="/vaccines" class="ui form" method="post">
                         <input  type="number" name="<%=allVaccines[i]%>"  min="1" max="150" style ="width:80px">
@@ -64,7 +64,7 @@
                     <td scope="row">
                         <form action="/vaccines" class="ui form" method="post">
                             <input  type="hidden" name="<%=allVaccines[i]%>" value = '-1'>
-                            <button class = "btn btn-success btn-sm btn-block" type="submit"><%=allVaccines[i]%><br><%=allValues[i]%></button>
+                            <button class = "btn btn-success btn-sm btn-block" type="submit"><%=allVaccines[i]%><br><strong><%=allValues[i]%></strong></button>
                         </form>
                         <form action="/vaccines" class="ui form" method="post">
                             <input  type="number" name="<%=allVaccines[i]%>"  min="1" max="150" style ="width:80px">
