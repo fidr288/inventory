@@ -9,20 +9,24 @@ db.serialize(() => {
   db.run("CREATE TABLE vaccine_count (name TEXT, count INTEGER)");
 
   // insert 3 rows of data:
-  db.run("INSERT INTO vaccine_count VALUES ('rotarix' , 0)");
-  db.run("INSERT INTO vaccine_count VALUES ('infarix-hexa' , 0)");
-  db.run("INSERT INTO vaccine_count VALUES ('pneumococcal' , 0)");
-  db.run("INSERT INTO vaccine_count VALUES ('hib' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('rotarix' , 27)");
+  db.run("INSERT INTO vaccine_count VALUES ('infarix-hexa' , 23)");
+  db.run("INSERT INTO vaccine_count VALUES ('pneumococcal' , 9)");
+  db.run("INSERT INTO vaccine_count VALUES ('hib' , 20)");
   db.run("INSERT INTO vaccine_count VALUES ('varilrix' , 0)");
-  db.run("INSERT INTO vaccine_count VALUES ('infarix-ipv' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('infarix-ipv' , 14)");
   db.run("INSERT INTO vaccine_count VALUES ('mmr' , 0)");
-  db.run("INSERT INTO vaccine_count VALUES ('flu' , 0)");
-  db.run("INSERT INTO vaccine_count VALUES ('boostrix' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('flu' , 17)");
+  db.run("INSERT INTO vaccine_count VALUES ('flu_baby' , 2)");
+  db.run("INSERT INTO vaccine_count VALUES ('boostrix' , 18)");
+  db.run("INSERT INTO vaccine_count VALUES ('boostrix_NF' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('varilrix_NF' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('hep_b' , 0)");
   db.run("INSERT INTO vaccine_count VALUES ('hpv' , 0)");
-  db.run("INSERT INTO vaccine_count VALUES ('adt' , 0)");
-  db.run("INSERT INTO vaccine_count VALUES ('zostavax' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('adt' , 27)");
+  db.run("INSERT INTO vaccine_count VALUES ('zostavax' , 50)");
   db.run("INSERT INTO vaccine_count VALUES ('menactra' , 0)");
-  db.run("INSERT INTO vaccine_count VALUES ('bexsero' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('bexsero' , 8)");
 
 
   console.log('successfully db');
