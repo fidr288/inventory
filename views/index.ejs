@@ -28,14 +28,14 @@
                         <button class = "btn btn-info btn-sm btn-block" type="submit"><%=allVaccines[i]%><br><strong><%=allValues[i]%></strong></button>
                     </form>
                     <form action="/vaccines" class="ui form" method="post">
-                        <input  type="number" name="<%=allVaccines[i]%>"  min="1" max="150" style ="width:80px">
+                        <input  type="number" name="<%=allVaccines[i]%>"  min="-100" max="250" style ="width:80px">
                         <button class = "btn btn-secondary btn-sml" type="submit">+</button>
                     </form>
                 </td>
                 <!-- <td scope="row" style="width: 60px"><%=allValues[i]%></td> -->
                 <!-- <td scope="row">
                     <form action="/vaccines" class="ui form" method="post">
-                    <input  type="number" name="<%=allVaccines[i]%>"  min="1" max="150" style ="width:80px">
+                    <input  type="number" name="<%=allVaccines[i]%>"  min="-50" max="250" style ="width:80px">
                     <button class = "btn btn-secondary btn-sml" type="submit">+</button>
                     </form>
                 </td> -->
