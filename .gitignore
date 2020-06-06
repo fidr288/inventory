@@ -7,7 +7,7 @@
 *.swo
 *.swp
 *.vi
-*.db
+#*.db
 *~
 *.sass-cache
 node_modules/
