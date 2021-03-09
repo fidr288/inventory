@@ -9,27 +9,23 @@ db.serialize(() => {
   db.run("CREATE TABLE vaccine_count (name TEXT, count INTEGER)");
 
   // insert 3 rows of data:
-  db.run("INSERT INTO vaccine_count VALUES ('rotarix' , 22)");
-  db.run("INSERT INTO vaccine_count VALUES ('infarix-hexa' , 23)");
-  db.run("INSERT INTO vaccine_count VALUES ('pneumococcal' , 23)");
+  db.run("INSERT INTO vaccine_count VALUES ('rotarix' , 19)");
+  db.run("INSERT INTO vaccine_count VALUES ('infarix-hexa' , 13)");
+  db.run("INSERT INTO vaccine_count VALUES ('pneumococcal' , 7)");
   db.run("INSERT INTO vaccine_count VALUES ('hib' , 8)");
-  db.run("INSERT INTO vaccine_count VALUES ('varilrix' , 17)");
-  db.run("INSERT INTO vaccine_count VALUES ('infarix-ipv' , 16)");
-  db.run("INSERT INTO vaccine_count VALUES ('mmr' , 67)");
-  db.run("INSERT INTO vaccine_count VALUES ('flu' , 10)");
-  db.run("INSERT INTO vaccine_count VALUES ('flu_baby' , 2)");
-  db.run("INSERT INTO vaccine_count VALUES ('boostrix' , 16)");
-  db.run("INSERT INTO vaccine_count VALUES ('boostrix_NF' , 5)");
-  db.run("INSERT INTO vaccine_count VALUES ('varilrix_NF' , 6)");
-  db.run("INSERT INTO vaccine_count VALUES ('hep_b' , 3)");
-  db.run("INSERT INTO vaccine_count VALUES ('hep_b_baby' , 3)");
-  db.run("INSERT INTO vaccine_count VALUES ('hep_b_NF' , 4)");
-  db.run("INSERT INTO vaccine_count VALUES ('hpv' , 17)");
-  db.run("INSERT INTO vaccine_count VALUES ('adt' , 8)");
-  db.run("INSERT INTO vaccine_count VALUES ('zostavax' , 40)");
-  db.run("INSERT INTO vaccine_count VALUES ('menactra' , 3)");
-  db.run("INSERT INTO vaccine_count VALUES ('bexsero' , 3)");
-
+  db.run("INSERT INTO vaccine_count VALUES ('varilrix' , 8)");
+  db.run("INSERT INTO vaccine_count VALUES ('infarix-ipv' , 11)");
+  db.run("INSERT INTO vaccine_count VALUES ('mmr' , 10)");
+  db.run("INSERT INTO vaccine_count VALUES ('boostrix' , 17)");
+  db.run("INSERT INTO vaccine_count VALUES ('hep_b' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('hpv' , 11)");
+  db.run("INSERT INTO vaccine_count VALUES ('zostavax' , 14)");
+  db.run("INSERT INTO vaccine_count VALUES ('flu' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('flu65' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('flu_baby' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('hep_b_NF' , 1)");
+  db.run("INSERT INTO vaccine_count VALUES ('boostrix_NF' , 0)");
+  db.run("INSERT INTO vaccine_count VALUES ('varilrix_NF' , 3)");
 
   console.log('successfully db');
 
